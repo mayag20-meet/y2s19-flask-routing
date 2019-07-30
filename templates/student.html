@@ -4,12 +4,18 @@
     <title>Student</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 </head>
+<style type="text/css">
+		h2{color: purple;}
+</style>
 <body>
-    <h1> You're id number is {{student_id}}.</h1>
+    <h2> Student {{student_id}}:</h2>
     <div>
+    	<h1>{{ student.name }} 
+    	from year {{ student.year }}</h1>
+    </div>
+	<div>
     	<a href="{{ url_for('home') }}">
     	back to homepage</a>
-
-    </div>
+	</div>
 </body>
 </html>
